@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/360608__sirkoto51__loading.wav-9bf36f9e5dcabd7dfcceaaee1e8e933b.sample"
+
+[deps]
+
+source_file="res://360608__sirkoto51__loading.wav"
+dest_files=[ "res://.import/360608__sirkoto51__loading.wav-9bf36f9e5dcabd7dfcceaaee1e8e933b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
