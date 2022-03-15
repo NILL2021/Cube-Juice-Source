@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://BSTACLE.tscn" type="PackedScene" id=1]
+[ext_resource path="res://main.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+
+[node name="Wall" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.22818, 0, -4.74233 )
+
+[node name="Wall2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.0806, 0, -4.74233 )
+
+[node name="Wall3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0675, 0, -4.74233 )
+
+[node name="Wall4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0675, 0, 0.335958 )
+
+[node name="Wall5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31796, 0, 4.26916 )
+
+[node name="Wall6" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.67419, 0, 4.26916 )
+
+[node name="KinematicBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999946, 0, -0.010437, 0, 1, 0, 0.010437, 0, -0.999946, 3.16889, 1.67599, -2.34686 )
+
+[node name="KinematicBody2" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999946, 0, -0.010437, 0, 1, 0, 0.010437, 0, -0.999946, 3.16889, 1.67599, 2.78687 )
+
+[node name="KinematicBody3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999946, 0, -0.010437, 0, 1, 0, 0.010437, 0, -0.999946, 3.16889, 1.67599, 7.00454 )
+
+[node name="KinematicBody4" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999946, 0, -0.010437, 0, 1, 0, 0.010437, 0, -0.999946, 3.16889, 1.67599, -7.31301 )

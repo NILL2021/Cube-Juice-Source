@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BSTACLE.tscn" type="PackedScene" id=1]
+[ext_resource path="res://main.tscn" type="PackedScene" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+
+[node name="KinematicBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, -0.43408, 1.31763, -4.06885 )
+
+[node name="KinematicBody2" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, 7.37824, 1.31763, -4.06885 )
+
+[node name="KinematicBody3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, 2.91055, 1.31763, 1.48726 )
+
+[node name="KinematicBody4" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, 5.65905, 1.31763, 6.54654 )
+
+[node name="KinematicBody5" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, -1.35612, 1.31763, 6.54654 )
+
+[node name="KinematicBody6" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, 1.47, 1.31763, 11.5474 )
+
+[node name="KinematicBody7" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, -5.38686, 1.31763, 11.5474 )
+
+[node name="KinematicBody8" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, 10.6576, 1.31763, 11.5474 )
+
+[node name="KinematicBody9" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, 10.6576, 1.31763, 2.44061 )
+
+[node name="KinematicBody10" parent="." instance=ExtResource( 1 )]
+transform = Transform( -0.999522, 0, 0.0309224, 0, 1, 0, -0.0309224, 0, -0.999522, -5.19037, 1.31763, 2.44061 )

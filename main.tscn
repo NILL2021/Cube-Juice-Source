@@ -1,0 +1,164 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://walls.tres" type="Material" id=1]
+[ext_resource path="res://thinh.png" type="Texture" id=2]
+[ext_resource path="res://game.gd" type="Script" id=3]
+[ext_resource path="res://the.tres" type="Theme" id=4]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=5]
+[ext_resource path="res://thebig.tres" type="Theme" id=6]
+[ext_resource path="res://pickupCoin.wav" type="AudioStream" id=7]
+
+[sub_resource type="ProceduralSky" id=6]
+sun_color = Color( 0.698039, 0.65098, 0.14902, 1 )
+
+[sub_resource type="Environment" id=5]
+background_mode = 3
+background_sky = SubResource( 6 )
+background_color = Color( 0.12549, 0.698039, 0.792157, 1 )
+dof_blur_far_distance = 30.0
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="CubeMesh" id=8]
+
+[sub_resource type="BoxShape" id=9]
+
+[node name="Node2D" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.0605873, 0.338689, -0.938946, -0.0218092, 0.940898, 0.337986, 0.997925, 3.73304e-09, 0.064393, -19.3278, 10.7752, 1.11559 )
+environment = SubResource( 5 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+use_collision = true
+
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0156851, -0.308727, 0.338617 )
+width = 35.7865
+height = 1.07498
+depth = 103.811
+
+[node name="CSGCylinder2" type="CSGCylinder" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.04089, 32.2251, -18.0918 )
+radius = 4.63674
+height = 64.3144
+material = SubResource( 1 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="CSGCombiner/CSGCylinder2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.60238, -27.5695, -0.214483 )
+operation = 2
+radius = 2.22807
+height = 8.23788
+
+[node name="DirectionalLight" type="DirectionalLight" parent="CSGCombiner/CSGCylinder2"]
+light_energy = 3.349
+light_indirect_energy = 1.146
+light_specular = 0.595
+light_bake_mode = 2
+shadow_enabled = true
+
+[node name="SpotLight" type="SpotLight" parent="CSGCombiner/CSGCylinder2"]
+transform = Transform( 0.450566, -0.00537547, -0.892727, 0.892743, 0.00271299, 0.450558, 0, -0.999982, 0.0060213, -10.6488, -0.884159, -3.69311 )
+spot_range = 38.4681
+spot_angle = 87.1875
+
+[node name="CSGBox5" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5632, 0.736736, 0 )
+height = 3.84934
+depth = 106.187
+
+[node name="CSGBox6" type="CSGBox" parent="CSGCombiner"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.83157, 0.736736, 0 )
+height = 3.84934
+depth = 106.14
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Spatial" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0491705, 1.6544, -18.4036 )
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Spatial"]
+stream = ExtResource( 7 )
+unit_db = 21.239
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3893, 0, 0 )
+omni_range = 29.8886
+
+[node name="StaticBody7" type="StaticBody" parent="." groups=["Win"]]
+
+[node name="CSGCylinder" type="CSGCylinder" parent="StaticBody7"]
+transform = Transform( 1, 0, 0, 0, 0.0686944, 0.997638, 0, -0.997638, 0.0686944, 3.30855, 3.82912, 24.2304 )
+radius = 5.5105
+height = 4.78992
+sides = 19
+material = SubResource( 7 )
+
+[node name="SpotLight" type="SpotLight" parent="StaticBody7/CSGCylinder"]
+transform = Transform( 1, 0, 0, 0, 0.100865, 0.9949, 0, -0.9949, 0.100865, -0.770107, 7.57169, 1.2031 )
+spot_range = 10.996
+spot_angle = 53.3919
+
+[node name="CSGBox" type="MeshInstance" parent="StaticBody7"]
+transform = Transform( 19.5837, 0, 0, 0, 11.5218, 0, 0, 0, 17.7023, 0, 4.66047, 40.2707 )
+mesh = SubResource( 8 )
+material/0 = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody7/CSGBox"]
+shape = SubResource( 9 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 1.0
+margin_top = 553.0
+margin_right = 193.0
+margin_bottom = 599.0
+theme = ExtResource( 4 )
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 498.0
+margin_top = 2.0
+margin_right = 556.0
+margin_bottom = 22.0
+theme = ExtResource( 4 )
+text = "Level: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 503.0
+margin_top = 14.0
+margin_right = 561.0
+margin_bottom = 44.0
+theme = ExtResource( 6 )
+text = "0:00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12766, -5.47545, 18.7252 )
+omni_range = 14.1875
+
+[node name="SpeedTimer" type="Timer" parent="."]
+
+[node name="Wall" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.44464, 0, 0 )
+
+[node name="Wall2" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1097, 0, 0 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="tree_entered" from="ProgressBar" to="." method="_on_ProgressBar_tree_entered"]
+[connection signal="timeout" from="SpeedTimer" to="." method="_on_SpeedTimer_timeout"]

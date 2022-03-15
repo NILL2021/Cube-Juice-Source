@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://rigid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://main.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Wall.tscn" type="PackedScene" id=3]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+
+[node name="Wall" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12351, 0.0639801, -3.42242 )
+
+[node name="Wall2" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.95614, 0.0639801, -3.42242 )
+
+[node name="Wall3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.95614, 0.0639801, 3.53115 )
+
+[node name="Wall4" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.221643, 0.0639801, 3.53115 )
+
+[node name="Wall5" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.01405, 0.0639801, 7.64437 )
+
+[node name="Wall6" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5299, 0.0639801, 7.64437 )
+
+[node name="Wall7" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8587, 0.0305176, 10.2087 )
+
+[node name="Wall8" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.61702, 0.0305176, 14.4206 )
+
+[node name="Wall9" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63618, 0.0305176, 14.4206 )
+
+[node name="Wall10" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2651, 0.160936, 17.6236 )
+
+[node name="RigidBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9252, 0 )
+
+[node name="RigidBody2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9252, 7.65953 )
+
+[node name="RigidBody3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9252, 14.5659 )
+
+[node name="RigidBody4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.99904, 2.9252, 14.5659 )
+
+[node name="RigidBody5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.99904, 2.9252, -7.68459 )

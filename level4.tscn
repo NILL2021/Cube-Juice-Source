@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://rigid.tscn" type="PackedScene" id=1]
+[ext_resource path="res://main.tscn" type="PackedScene" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+
+[node name="RigidBody" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.1374, -9.36138 )
+
+[node name="RigidBody2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.1374, -6.85319 )
+
+[node name="RigidBody3" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.1374, -3.82451 )
+
+[node name="RigidBody4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57458, 20.1374, -3.82451 )
+
+[node name="RigidBody5" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.57458, 20.1374, -1.33504 )
+
+[node name="RigidBody6" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.74381, 20.1374, -1.33504 )
+
+[node name="RigidBody7" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.74381, 20.1374, 1.30507 )
+
+[node name="RigidBody8" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.74381, 20.1374, 3.64655 )
+
+[node name="RigidBody9" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.796, 20.1374, 3.64655 )
+
+[node name="RigidBody10" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.796, 20.1374, 1.06716 )
+
+[node name="RigidBody11" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.796, 20.1374, -1.31978 )
+
+[node name="RigidBody12" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.796, 20.1374, -4.47299 )
+
+[node name="RigidBody13" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.46817, 20.1374, -4.47299 )
+
+[node name="RigidBody14" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.46817, 20.1374, -7.87406 )
+
+[node name="RigidBody15" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.023, 20.1374, -7.87406 )
+
+[node name="RigidBody16" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.452, 20.1374, -7.87406 )
+
+[node name="RigidBody17" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.452, 20.1374, -10.0457 )
+
+[node name="RigidBody18" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.32566, 20.1374, -10.0457 )
+
+[node name="RigidBody19" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21426, 20.1374, -10.0457 )
+
+[node name="RigidBody20" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21426, 20.1374, 1.53189 )
+
+[node name="RigidBody21" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21426, 20.1374, 4.37883 )
+
+[node name="RigidBody22" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.433357, 20.1374, 4.37883 )
+
+[node name="RigidBody23" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.433357, 20.1374, 1.08666 )
+
+[node name="RigidBody24" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.433357, 20.1374, -1.69642 )
